@@ -1,0 +1,643 @@
+/**
+ * FE Credit-Inspired Style Updates for Shinhan Bank
+ * Modern consumer finance design with improved UX
+ */
+
+/* ==========================================================================
+   Color Palette - Inspired by FE Credit's red/blue theme
+   ========================================================================== */
+:root {
+    /* Primary Colors - Red Theme (FE Credit accent) */
+    --fc-primary-red: #e62e2e;
+    --fc-primary-red-dark: #c41e1e;
+    --fc-primary-red-light: #ff5252;
+    
+    /* Secondary Colors - Blue Theme (Trust & Banking) */
+    --fc-primary-blue: #003087;
+    --fc-primary-blue-dark: #002060;
+    --fc-primary-blue-light: #0052cc;
+    
+    /* Accent Colors */
+    --fc-accent-orange: #ff6b35;
+    --fc-accent-gold: #ffc107;
+    
+    /* Neutral Colors */
+    --fc-white: #ffffff;
+    --fc-gray-100: #f8f9fa;
+    --fc-gray-200: #e9ecef;
+    --fc-gray-300: #dee2e6;
+    --fc-gray-400: #ced4da;
+    --fc-gray-500: #adb5bd;
+    --fc-gray-600: #6c757d;
+    --fc-gray-700: #495057;
+    --fc-gray-800: #343a40;
+    --fc-gray-900: #212529;
+    
+    /* Status Colors */
+    --fc-success: #28a745;
+    --fc-warning: #ffc107;
+    --fc-error: #dc3545;
+    --fc-info: #17a2b8;
+    
+    /* Shadows */
+    --fc-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --fc-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --fc-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --fc-shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.2);
+    
+    /* Border Radius */
+    --fc-radius-sm: 4px;
+    --fc-radius-md: 8px;
+    --fc-radius-lg: 12px;
+    --fc-radius-xl: 16px;
+    --fc-radius-full: 9999px;
+    
+    /* Transitions */
+    --fc-transition-fast: 0.15s ease;
+    --fc-transition-normal: 0.3s ease;
+    --fc-transition-slow: 0.5s ease;
+}
+
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
+.fc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* ==========================================================================
+   Hero Banner Section - FE Credit Style
+   ========================================================================== */
+.fc-hero-banner {
+    background: linear-gradient(135deg, var(--fc-primary-blue) 0%, var(--fc-primary-blue-dark) 100%);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.fc-hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(230, 46, 46, 0.1) 0%, transparent 70%);
+    animation: pulse-bg 4s ease-in-out infinite;
+}
+
+@keyframes pulse-bg {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+}
+
+.fc-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: var(--fc-white);
+}
+
+.fc-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.fc-hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: 32px;
+}
+
+/* ==========================================================================
+   CTA Buttons - FE Credit Inspired
+   ========================================================================== */
+.fc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--fc-radius-full);
+    cursor: pointer;
+    transition: all var(--fc-transition-normal);
+    text-decoration: none;
+    gap: 8px;
+}
+
+.fc-btn-primary {
+    background: linear-gradient(135deg, var(--fc-primary-red) 0%, var(--fc-primary-red-dark) 100%);
+    color: var(--fc-white);
+    box-shadow: 0 4px 16px rgba(230, 46, 46, 0.3);
+}
+
+.fc-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(230, 46, 46, 0.4);
+    background: linear-gradient(135deg, var(--fc-primary-red-light) 0%, var(--fc-primary-red) 100%);
+}
+
+.fc-btn-secondary {
+    background: var(--fc-white);
+    color: var(--fc-primary-blue);
+    border: 2px solid var(--fc-primary-blue);
+}
+
+.fc-btn-secondary:hover {
+    background: var(--fc-primary-blue);
+    color: var(--fc-white);
+}
+
+.fc-btn-outline {
+    background: transparent;
+    color: var(--fc-white);
+    border: 2px solid var(--fc-white);
+}
+
+.fc-btn-outline:hover {
+    background: var(--fc-white);
+    color: var(--fc-primary-blue);
+}
+
+/* ==========================================================================
+   Quick Apply Card - FE Credit Style
+   ========================================================================== */
+.fc-quick-apply {
+    background: var(--fc-white);
+    border-radius: var(--fc-radius-xl);
+    padding: 32px;
+    box-shadow: var(--fc-shadow-lg);
+    margin: -40px auto 40px;
+    max-width: 800px;
+    position: relative;
+    z-index: 10;
+}
+
+.fc-quick-apply-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--fc-primary-blue);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.fc-quick-apply-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.fc-quick-apply-input {
+    padding: 14px 16px;
+    border: 2px solid var(--fc-gray-300);
+    border-radius: var(--fc-radius-md);
+    font-size: 16px;
+    transition: all var(--fc-transition-fast);
+}
+
+.fc-quick-apply-input:focus {
+    outline: none;
+    border-color: var(--fc-primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.1);
+}
+
+/* ==========================================================================
+   Feature Cards - FE Credit Style Benefits
+   ========================================================================== */
+.fc-features {
+    padding: 60px 0;
+    background: var(--fc-gray-100);
+}
+
+.fc-features-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--fc-gray-900);
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.fc-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.fc-feature-card {
+    background: var(--fc-white);
+    border-radius: var(--fc-radius-lg);
+    padding: 32px;
+    text-align: center;
+    transition: all var(--fc-transition-normal);
+    box-shadow: var(--fc-shadow-sm);
+}
+
+.fc-feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--fc-shadow-lg);
+}
+
+.fc-feature-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--fc-primary-red) 0%, var(--fc-accent-orange) 100%);
+    border-radius: var(--fc-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--fc-white);
+    font-size: 28px;
+}
+
+.fc-feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--fc-gray-900);
+    margin-bottom: 12px;
+}
+
+.fc-feature-text {
+    font-size: 0.95rem;
+    color: var(--fc-gray-600);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Loan Calculator Section
+   ========================================================================== */
+.fc-calculator {
+    padding: 60px 0;
+    background: var(--fc-white);
+}
+
+.fc-calculator-card {
+    background: linear-gradient(135deg, var(--fc-primary-blue) 0%, var(--fc-primary-blue-dark) 100%);
+    border-radius: var(--fc-radius-xl);
+    padding: 40px;
+    color: var(--fc-white);
+}
+
+.fc-calculator-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.fc-slider-group {
+    margin-bottom: 32px;
+}
+
+.fc-slider-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.fc-slider-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--fc-accent-gold);
+}
+
+.fc-slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    appearance: none;
+    cursor: pointer;
+}
+
+.fc-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: var(--fc-accent-gold);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fc-result-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--fc-radius-lg);
+    padding: 24px;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.fc-result-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 8px;
+}
+
+.fc-result-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--fc-accent-gold);
+}
+
+/* ==========================================================================
+   Process Steps - FE Credit Style
+   ========================================================================== */
+.fc-process {
+    padding: 60px 0;
+    background: var(--fc-gray-100);
+}
+
+.fc-process-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--fc-gray-900);
+    margin-bottom: 48px;
+}
+
+.fc-process-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.fc-step {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    text-align: center;
+    position: relative;
+}
+
+.fc-step::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: -40px;
+    width: 40px;
+    height: 2px;
+    background: var(--fc-gray-300);
+}
+
+.fc-step:last-child::after {
+    display: none;
+}
+
+.fc-step-number {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--fc-primary-red) 0%, var(--fc-accent-orange) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--fc-white);
+    box-shadow: 0 4px 16px rgba(230, 46, 46, 0.3);
+}
+
+.fc-step-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--fc-gray-900);
+    margin-bottom: 8px;
+}
+
+.fc-step-text {
+    font-size: 0.9rem;
+    color: var(--fc-gray-600);
+}
+
+/* ==========================================================================
+   Trust Badges
+   ========================================================================== */
+.fc-trust {
+    padding: 40px 0;
+    background: var(--fc-white);
+    border-top: 1px solid var(--fc-gray-200);
+}
+
+.fc-trust-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.fc-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--fc-gray-600);
+}
+
+.fc-trust-icon {
+    color: var(--fc-success);
+    font-size: 24px;
+}
+
+/* ==========================================================================
+   Floating CTA Button - Mobile
+   ========================================================================== */
+.fc-floating-cta {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .fc-floating-cta {
+        display: block;
+    }
+    
+    .fc-floating-cta .fc-btn {
+        box-shadow: var(--fc-shadow-xl);
+        animation: bounce 2s infinite;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* ==========================================================================
+   Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 768px) {
+    .fc-hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .fc-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .fc-quick-apply {
+        margin: -20px 16px 24px;
+        padding: 24px;
+    }
+    
+    .fc-quick-apply-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fc-features, .fc-calculator, .fc-process {
+        padding: 40px 0;
+    }
+    
+    .fc-step::after {
+        display: none;
+    }
+    
+    .fc-calculator-card {
+        padding: 24px;
+    }
+}
+
+/* ==========================================================================
+   Animation Classes
+   ========================================================================== */
+.fc-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.fc-slide-up {
+    animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   Form Enhancements
+   ========================================================================== */
+.fc-form-group {
+    margin-bottom: 20px;
+}
+
+.fc-form-label {
+    display: block;
+    font-weight: 600;
+    color: var(--fc-gray-800);
+    margin-bottom: 8px;
+}
+
+.fc-form-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--fc-gray-300);
+    border-radius: var(--fc-radius-md);
+    font-size: 16px;
+    transition: all var(--fc-transition-fast);
+    background: var(--fc-white);
+}
+
+.fc-form-input:focus {
+    outline: none;
+    border-color: var(--fc-primary-blue);
+    box-shadow: 0 0 0 4px rgba(0, 48, 135, 0.1);
+}
+
+.fc-form-input.is-valid {
+    border-color: var(--fc-success);
+}
+
+.fc-form-input.is-invalid {
+    border-color: var(--fc-error);
+}
+
+/* Consent Checkbox */
+.fc-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: var(--fc-gray-100);
+    border-radius: var(--fc-radius-md);
+    margin-top: 24px;
+}
+
+.fc-consent-checkbox {
+    width: 24px;
+    height: 24px;
+    accent-color: var(--fc-primary-red);
+    cursor: pointer;
+}
+
+.fc-consent-text {
+    font-size: 14px;
+    color: var(--fc-gray-700);
+    line-height: 1.5;
+}
+
+.fc-consent-text a {
+    color: var(--fc-primary-blue);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Header Enhancement
+   ========================================================================== */
+.fc-header-enhanced {
+    background: linear-gradient(135deg, var(--fc-primary-blue) 0%, var(--fc-primary-blue-dark) 100%);
+    padding: 12px 0;
+}
+
+.fc-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fc-hotline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--fc-white);
+}
+
+.fc-hotline-icon {
+    animation: ring 1s ease-in-out infinite;
+}
+
+@keyframes ring {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    75% { transform: rotate(-15deg); }
+}
+
+.fc-hotline-number {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--fc-accent-gold);
+}
