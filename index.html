@@ -36,6 +36,9 @@
     <link rel="stylesheet" type="text/css" href="https://shinhan.com.vn/public/article.css?v=1" />
     <link rel="stylesheet" type="text/css" href="https://shinhan.com.vn/public/themes/shinhan/css/stylelibs.min.css?v=1" />
     <link rel="stylesheet" type="text/css" href="https://shinhan.com.vn/public/themes/shinhan/scss/style.min.css?v=0823" />
+    <!-- FE Credit-Inspired Modern Design -->
+    <link rel="stylesheet" type="text/css" href="assets/css/fecredit-style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
         .popup-success {
             width: 420px;
@@ -860,7 +863,140 @@
             </div>
         </header>
         <div id="page-wrapper">
-            <div class="banner-top">
+            <!-- FE Credit-Style Hero Banner -->
+            <section class="fc-hero-banner">
+                <div class="fc-container">
+                    <div class="fc-hero-content fc-slide-up">
+                        <h1 class="fc-hero-title">Vay Tiêu Dùng Tín Chấp</h1>
+                        <p class="fc-hero-subtitle">Giải pháp tài chính linh hoạt - Duyệt hồ sơ trong 24h - Giải ngân nhanh chóng</p>
+                        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                            <a href="/pages/vi/step1.html" class="fc-btn fc-btn-primary">
+                                <i class="fas fa-rocket"></i> Đăng Ký Ngay
+                            </a>
+                            <a href="/pages/vi/loan_calculator.html" class="fc-btn fc-btn-outline">
+                                <i class="fas fa-calculator"></i> Tính Khoản Vay
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FE Credit-Style Quick Apply Card -->
+            <div class="fc-container">
+                <div class="fc-quick-apply fc-fade-in">
+                    <h3 class="fc-quick-apply-title">
+                        <i class="fas fa-bolt" style="color: var(--fc-primary-red);"></i>
+                        Đăng Ký Nhanh - Chỉ 3 Bước Đơn Giản
+                    </h3>
+                    <form class="fc-quick-apply-grid" action="/pages/vi/step1.html" method="GET">
+                        <input type="text" class="fc-quick-apply-input" placeholder="Họ và tên (theo CCCD)" name="fullname" required>
+                        <input type="tel" class="fc-quick-apply-input" placeholder="Số CCCD (12 số)" name="cccd" maxlength="12" pattern="[0-9]{12}" required>
+                        <input type="tel" class="fc-quick-apply-input" placeholder="Số điện thoại" name="phone" pattern="[0-9]{10,11}" required>
+                        <button type="submit" class="fc-btn fc-btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Gửi Đăng Ký
+                        </button>
+                    </form>
+                    <div class="fc-consent">
+                        <input type="checkbox" class="fc-consent-checkbox" id="quickConsent" required>
+                        <label class="fc-consent-text" for="quickConsent">
+                            Tôi đồng ý với <a href="/pages/vi/chinh-sach-bao-mat.html" target="_blank">Chính sách bảo mật</a> 
+                            và <a href="/pages/vi/dieu-khoan-su-dung.html" target="_blank">Điều khoản sử dụng</a> của Ngân hàng Shinhan.
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FE Credit-Style Features Section -->
+            <section class="fc-features">
+                <div class="fc-container">
+                    <h2 class="fc-features-title">Tại Sao Chọn Shinhan?</h2>
+                    <div class="fc-features-grid">
+                        <div class="fc-feature-card">
+                            <div class="fc-feature-icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <h3 class="fc-feature-title">Lãi Suất Ưu Đãi</h3>
+                            <p class="fc-feature-text">Chỉ từ 11%/năm, tính trên dư nợ giảm dần - tiết kiệm chi phí tối đa cho bạn.</p>
+                        </div>
+                        <div class="fc-feature-card">
+                            <div class="fc-feature-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <h3 class="fc-feature-title">Hạn Mức Cao</h3>
+                            <p class="fc-feature-text">Cho vay lên đến 900 triệu đồng, đáp ứng mọi nhu cầu tài chính của bạn.</p>
+                        </div>
+                        <div class="fc-feature-card">
+                            <div class="fc-feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3 class="fc-feature-title">Thời Hạn Linh Hoạt</h3>
+                            <p class="fc-feature-text">Thời hạn vay lên đến 60 tháng, thoải mái lựa chọn kỳ hạn phù hợp.</p>
+                        </div>
+                        <div class="fc-feature-card">
+                            <div class="fc-feature-icon">
+                                <i class="fas fa-file-signature"></i>
+                            </div>
+                            <h3 class="fc-feature-title">Thủ Tục Đơn Giản</h3>
+                            <p class="fc-feature-text">Không cần tài sản thế chấp, không cần bảo lãnh công ty.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FE Credit-Style Process Steps -->
+            <section class="fc-process">
+                <div class="fc-container">
+                    <h2 class="fc-process-title">Quy Trình Đăng Ký</h2>
+                    <div class="fc-process-steps">
+                        <div class="fc-step">
+                            <div class="fc-step-number">1</div>
+                            <h4 class="fc-step-title">Đăng Ký Online</h4>
+                            <p class="fc-step-text">Điền thông tin cơ bản chỉ trong 2 phút</p>
+                        </div>
+                        <div class="fc-step">
+                            <div class="fc-step-number">2</div>
+                            <h4 class="fc-step-title">Xác Thực eKYC</h4>
+                            <p class="fc-step-text">Xác minh danh tính trực tuyến nhanh chóng</p>
+                        </div>
+                        <div class="fc-step">
+                            <div class="fc-step-number">3</div>
+                            <h4 class="fc-step-title">Phê Duyệt</h4>
+                            <p class="fc-step-text">Nhận kết quả trong vòng 24h làm việc</p>
+                        </div>
+                        <div class="fc-step">
+                            <div class="fc-step-number">4</div>
+                            <h4 class="fc-step-title">Giải Ngân</h4>
+                            <p class="fc-step-text">Nhận tiền trực tiếp vào tài khoản</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trust Badges -->
+            <section class="fc-trust">
+                <div class="fc-container">
+                    <div class="fc-trust-grid">
+                        <div class="fc-trust-item">
+                            <i class="fas fa-shield-alt fc-trust-icon"></i>
+                            <span>Bảo mật thông tin 100%</span>
+                        </div>
+                        <div class="fc-trust-item">
+                            <i class="fas fa-user-check fc-trust-icon"></i>
+                            <span>Hơn 1 triệu khách hàng tin tưởng</span>
+                        </div>
+                        <div class="fc-trust-item">
+                            <i class="fas fa-headset fc-trust-icon"></i>
+                            <span>Hỗ trợ 24/7</span>
+                        </div>
+                        <div class="fc-trust-item">
+                            <i class="fas fa-building fc-trust-icon"></i>
+                            <span>Thuộc tập đoàn Shinhan Hàn Quốc</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="banner-top" style="margin-top: 0;">
                 <img src="https://shinhan.com.vn/public/uploads/personal/2025/RLD/2025.01_RLD_Unsecured--Loan_Baneer.jpg" alt="">
                 <div class="container">
                     <div class="text-w">
@@ -878,7 +1014,7 @@
                     <div class="selected"><span></span></div>
                     <div class="list-tab">
                         <div class="tab active"><a href="/pages/vi/lai-suat-vay.html"><span>Lợi ích</span></a></div>
-                        <div class="tab active"><a href="/pages/vi/Evaluate-conditions.html"><span>Giảy Ngân Khoản Vay</span></a></div>
+                        <div class="tab active"><a href="/pages/vi/Evaluate-conditions.html"><span>Giải Ngân Khoản Vay</span></a></div>
                         <div class="tab" class="active"><a href="/pages/vi/dieu-khoan-su-dung.html"><span>Giấy Tờ Cần Thiết</span></a></div>
                         <div class="tab" class="active"><a href="/pages/vi/step1.html" class="btn btn-primary">Đăng ký vay</a></div>
                         <div class="tab" class="active"><a href="/pages/vi/check_result.html"><span>Xem kết quả</span></a></div>
@@ -1227,6 +1363,14 @@
         window.Laravel = {"csrfToken":"flBZzgVCzEBmPwoEyekJgpET4VkG6FCAU6WnPQta"}
     </script>
     Sản phẩm vay tiêu dùng với hạn mức cho vay lên đến 900 triệu đồng, thời hạn vay lên đến 60 tháng
+    
+    <!-- FE Credit-Style Floating CTA Button (Mobile) -->
+    <div class="fc-floating-cta">
+        <a href="/pages/vi/step1.html" class="fc-btn fc-btn-primary">
+            <i class="fas fa-edit"></i> Đăng Ký Vay Ngay
+        </a>
+    </div>
+    
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZ3KJBS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
