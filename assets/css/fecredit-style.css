@@ -11,11 +11,13 @@
     --fc-primary-red: #e62e2e;
     --fc-primary-red-dark: #c41e1e;
     --fc-primary-red-light: #ff5252;
+    --fc-primary-red-rgb: 230, 46, 46;
     
     /* Secondary Colors - Blue Theme (Trust & Banking) */
     --fc-primary-blue: #003087;
     --fc-primary-blue-dark: #002060;
     --fc-primary-blue-light: #0052cc;
+    --fc-primary-blue-rgb: 0, 48, 135;
     
     /* Accent Colors */
     --fc-accent-orange: #ff6b35;
@@ -205,7 +207,7 @@
 .fc-quick-apply-input:focus {
     outline: none;
     border-color: var(--fc-primary-blue);
-    box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.1);
+    box-shadow: 0 0 0 3px rgba(var(--fc-primary-blue-rgb), 0.1);
 }
 
 /* ==========================================================================
@@ -565,7 +567,7 @@
 .fc-form-input:focus {
     outline: none;
     border-color: var(--fc-primary-blue);
-    box-shadow: 0 0 0 4px rgba(0, 48, 135, 0.1);
+    box-shadow: 0 0 0 4px rgba(var(--fc-primary-blue-rgb), 0.1);
 }
 
 .fc-form-input.is-valid {
